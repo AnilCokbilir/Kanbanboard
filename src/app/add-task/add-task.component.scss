@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+    margin-top: 64px;
+}
+
+h4 {
+    text-align: center;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    mat-form-field {
+        width: 250px;
+    }
+    .border {
+        box-shadow: 0 2px 4px 2px #76767626;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: max-content;
+        padding: 32px;
+    }
+}
