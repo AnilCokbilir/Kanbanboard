@@ -16,11 +16,13 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { BacklogComponent } from './backlog/backlog.component';
 @NgModule({
   declarations: [
     AppComponent,
     AddTaskComponent,
-    HeaderComponent
+    HeaderComponent,
+    BacklogComponent
   ],
   imports: [
     BrowserModule,
