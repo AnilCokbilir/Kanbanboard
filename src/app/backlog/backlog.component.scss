@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    mat-card {
+        display: flex;
+        width: 70%;
+        margin-top: 32px;
+        box-shadow: 0 5px 10px 5px #00000026;
+        .backlog {
+            width: 33%;
+        }
+    }
+    .High {
+        background-color: rgb(255, 54, 67);
+    }
+    .Medium {
+        background-color: rgb(255, 168, 67);
+    }
+    .Low {
+        background-color: rgb(126, 255, 67);
+    }
+    mat-icon:hover {
+        cursor: pointer;
+    }
+}

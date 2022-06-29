@@ -6,10 +6,14 @@ import { AlltasksService } from '../alltasks.service';
   styleUrls: ['./backlog.component.scss']
 })
 export class BacklogComponent implements OnInit {
-
+  expandedIndex = 0;
   constructor(public alltasks: AlltasksService) { }
 
   ngOnInit(): void {
+  }
+
+  deletePos(i: any) {
+    this.alltasks.tasks.splice(i, 1)
   }
 
 }

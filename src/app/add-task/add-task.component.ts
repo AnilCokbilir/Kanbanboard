@@ -7,9 +7,14 @@ import { AlltasksService } from '../alltasks.service';
 })
 export class AddTaskComponent implements OnInit {
   urgencies = ['Low', 'Medium', 'High'];
+  assignes = ['Anil Cokbilir', 'Florian Rehm', 'Junus Ergin', 'Kevin Wißmer', 'Mihai-Andrei Neacsu'];
+  assignInput: any;
   title!: string;
   description!: string;
-  dateInput!: Date;
+  dateInput!: any;
+  urgency: any;
+  urgencyInput: any;
+
   constructor(public allTasks: AlltasksService) { }
 
   ngOnInit(): void {
@@ -19,13 +24,19 @@ export class AddTaskComponent implements OnInit {
     let object = {
       'Title': this.title,
       'Description': this.description,
-      'Date': this.dateInput
+      'Assigned': this.assignInput,
+      'Date': this.dateInput,
+      'Urgency': this.urgencyInput,
+      'Category': 'todo',
     }
     this.allTasks.tasks.push(object)
     console.log(this.allTasks.tasks)
 
     this.title = '';
     this.description = '';
+    this.dateInput = '';
+    this.urgencyInput = '';
+
   }
 
 }

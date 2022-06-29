@@ -17,12 +17,16 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { BacklogComponent } from './backlog/backlog.component';
+import { MatCardModule } from '@angular/material/card';
+import { BoardComponent } from './board/board.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 @NgModule({
   declarations: [
     AppComponent,
     AddTaskComponent,
     HeaderComponent,
-    BacklogComponent
+    BacklogComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule,
@@ -37,8 +41,9 @@ import { BacklogComponent } from './backlog/backlog.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    FormsModule
-
+    FormsModule,
+    MatCardModule,
+    DragDropModule
 
 
   ],
