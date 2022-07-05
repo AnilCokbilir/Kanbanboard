@@ -1,8 +1,8 @@
-<div class="wrapper" *ngFor="let task of alltasks.tasks; let i = index">
-    <mat-card class="{{task.Urgency}}">
-        <div class="backlog">{{task.Assigned}}</div>
-        <div class="backlog">{{task.Title}}</div>
-        <div class="backlog">{{task.Date | date: 'EEEE, MMMM d, y' }}</div>
+<div class="wrapper" *ngFor="let task of allTasksFire; let i = index">
+    <mat-card class="{{task.object.Urgency}}">
+        <div class="backlog">{{task.object.Assigned}}</div>
+        <div class="backlog">{{task.object.Title}}</div>
+        <div class="backlog">{{task.object.Date.seconds | date: 'EEEE, MMMM d, y' }}</div>
         <mat-icon (click)="deletePos(i)">delete</mat-icon>
     </mat-card>
 </div>

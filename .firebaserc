@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kanbanboard-19071": {
+      "hosting": {
+        "kanbanboard": [
+          "kanbanboard-19071"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kanbanboard-19071"
+  }
+}
