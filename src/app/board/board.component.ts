@@ -10,6 +10,7 @@ export class BoardComponent implements OnInit {
   done: any;
   doneList: any;
   todoList: any;
+  todo: any;
   constructor(public alltasks: AlltasksService) { }
 
   ngOnInit(): void {
