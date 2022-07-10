@@ -1,17 +1,33 @@
 <div class="example-container">
     <h2>To do</h2>
 
-    <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]"
-        class="example-list" (cdkDropListDropped)="drop($event)">
-        <div class="example-box" *ngFor="let task of test" cdkDrag>{{task.object.Title}}</div>
+    <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todoBoard" [cdkDropListConnectedTo]="[doneList, inprogressList, testingList, todoList]" class="example-list" (cdkDropListDropped)="drop($event)">
+        <div *ngFor="let task of todoBoard; let i = index" class="{{task.object.Urgency}} example-box" cdkDrag>{{task.object.Title}}</div>
+    </div>
+</div>
+
+
+
+<div class="example-container">
+    <h2>In Progress</h2>
+
+    <div cdkDropList #inprogressList="cdkDropList" [cdkDropListData]="inprogressBoard" [cdkDropListConnectedTo]="[doneList, inprogressList, testingList, todoList]" class="example-list" (cdkDropListDropped)="drop($event)">
+        <div *ngFor="let task of inprogressBoard; let i = index" class="{{task.object.Urgency}} example-box" cdkDrag>{{task.object.Title}}</div>
+    </div>
+</div>
+
+<div class="example-container">
+    <h2>Testing</h2>
+
+    <div cdkDropList #testingList="cdkDropList" [cdkDropListData]="testingBoard" [cdkDropListConnectedTo]="[doneList, inprogressList, testingList, todoList]" class="example-list" (cdkDropListDropped)="drop($event)">
+        <div *ngFor="let task of testingBoard; let i = index" class="{{task.object.Urgency}} example-box" cdkDrag>{{task.object.Title}}</div>
     </div>
 </div>
 
 <div class="example-container">
     <h2>Done</h2>
 
-    <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]"
-        class="example-list" (cdkDropListDropped)="drop($event)">
-        <div class="example-box" *ngFor="let task of testtwo" cdkDrag>{{task}}</div>
+    <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="doneBoard" [cdkDropListConnectedTo]="[doneList, inprogressList, testingList, todoList]" class="example-list" (cdkDropListDropped)="drop($event)">
+        <div *ngFor="let task of doneBoard; let i = index" class="{{task.object.Urgency}} example-box" cdkDrag>{{task.object.Title}}</div>
     </div>
 </div>
