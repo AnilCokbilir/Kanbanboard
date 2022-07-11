@@ -26,6 +26,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { ImprintComponent } from './imprint/imprint.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { ImprintComponent } from './imprint/imprint.component';
     HeaderComponent,
     BacklogComponent,
     BoardComponent,
-    ImprintComponent
+    ImprintComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

@@ -3,21 +3,26 @@
 html,
 body {
     height: 100%;
+    font-family: 'Edu QLD Beginner', cursive;
 }
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .High {
-    background-color: rgb(255, 54, 67) !important;
+    background-color: rgba(255, 54, 67, 0.817) !important;
 }
 
 .Medium {
-    background-color: rgb(255, 168, 67) !important;
+    background-color: rgba(255, 225, 0, 0.744) !important;
 }
 
 .Low {
-    background-color: rgb(126, 255, 67) !important;
+    background-color: rgba(127, 255, 67, 0.768) !important;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
 }
