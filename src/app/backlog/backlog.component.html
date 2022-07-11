@@ -3,6 +3,6 @@
         <div class="backlog">{{task.object.Assigned}}</div>
         <div class="backlog">{{task.object.Title}}</div>
         <div class="backlog">{{task.object.Date.seconds | date: 'EEEE, MMMM d, y' }}</div>
-        <mat-icon (click)="deletePos(i)">delete</mat-icon>
+        <mat-icon (click)="deletePos($event, task)">delete</mat-icon>
     </mat-card>
 </div>

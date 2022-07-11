@@ -3,11 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { BacklogComponent } from './backlog/backlog.component';
 import { BoardComponent } from './board/board.component';
+import { ImprintComponent } from './imprint/imprint.component';
+
 
 const routes: Routes = [
   { path: 'backlog', component: BacklogComponent },
   { path: 'addtask', component: AddTaskComponent },
-  { path: 'board', component: BoardComponent }
+  { path: 'board', component: BoardComponent },
+  { path: 'imprint', component: ImprintComponent }
 ];
 
 @NgModule({

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlltasksService } from '../alltasks.service';
 import { Firestore, collectionData, collection, setDoc, doc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { deleteDoc } from 'firebase/firestore';
 
 @Component({
   selector: 'app-backlog',
@@ -9,25 +10,36 @@ import { Observable } from 'rxjs';
   styleUrls: ['./backlog.component.scss']
 })
 export class BacklogComponent implements OnInit {
+  dragedTask: any;
   tasks$: Observable<any>;
   allTasksFire: any[] = [];
   expandedIndex = 0;
   constructor(public alltasks: AlltasksService, private firestore: Firestore) {
 
-    const coll: any = collection(firestore, 'tasks');
-    this.tasks$ = collectionData(coll);
+    const coll = collection(firestore, 'tasks');
+    this.tasks$ = collectionData(coll, { idField: 'customIdName' });
 
     this.tasks$.subscribe((newTasks) => {
-      console.log('Neue Tasks:', newTasks)
+      newTasks = newTasks.map((t: any) => {
+        t.object['customIdName'] = t.customIdName;
+        return t;
+      });
+      console.log('Neue Tasks:', newTasks);
       this.allTasksFire = newTasks;
+
     })
   }
 
   ngOnInit(): void {
   }
 
-  deletePos(i: any) {
-    this.alltasks.tasks.splice(i, 1)
+  deletePos(event: any, tasks: any) {
+    console.log(event, tasks);
+    this.dragedTask = tasks;
+    let collRef = collection(this.firestore, 'tasks');
+    let docRef = doc(collRef, this.dragedTask.customIdName);
+    console.log(this.dragedTask);
+    deleteDoc(docRef);
   }
 
 }

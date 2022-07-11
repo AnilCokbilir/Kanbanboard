@@ -20,18 +20,20 @@ import { BacklogComponent } from './backlog/backlog.component';
 import { MatCardModule } from '@angular/material/card';
 import { BoardComponent } from './board/board.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideDatabase, getDatabase } from '@angular/fire/database';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { ImprintComponent } from './imprint/imprint.component';
 @NgModule({
   declarations: [
     AppComponent,
     AddTaskComponent,
     HeaderComponent,
     BacklogComponent,
-    BoardComponent
+    BoardComponent,
+    ImprintComponent
   ],
   imports: [
     BrowserModule,
