@@ -42,7 +42,7 @@ export class AddTaskComponent implements OnInit {
       'Title': this.title,
       'Description': this.description,
       'Assigned': this.assignInput,
-      'Date': this.dateInput,
+      'Date': new Date(this.dateInput).toLocaleString('en-GB'),
       'Urgency': this.urgencyInput,
       'Category': 'todo',
     }
@@ -57,5 +57,7 @@ export class AddTaskComponent implements OnInit {
     // this.dateInput = '';
     // this.urgencyInput = '';
   }
+
+
 
 }

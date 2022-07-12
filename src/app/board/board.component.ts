@@ -3,6 +3,9 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 import { AlltasksService } from '../alltasks.service';
 import { Firestore, collectionData, collection, setDoc, doc, docData, updateDoc } from '@angular/fire/firestore';
 import { filter, map, Observable } from 'rxjs';
+import { deleteDoc } from 'firebase/firestore';
+import { EditUserComponent } from '../edit-user/edit-user.component';
+
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
@@ -21,6 +24,8 @@ export class BoardComponent implements OnInit {
   doneBoard: any;
   inprogressBoard: any;
   testingBoard: any;
+  initials!: string;
+
   constructor(public alltasks: AlltasksService, public firestore: Firestore) {
 
     const coll = collection(firestore, 'tasks');
@@ -43,6 +48,11 @@ export class BoardComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+  test(tasks: any) {
+    let string = tasks.object.Assigned.split(' ');
+    let initials = string[0].substring(0, 1).toUpperCase() + string[1].substring(0, 1).toUpperCase()
+    return initials;
   }
 
   onDragStarted(event: any, task: any) {
@@ -109,6 +119,19 @@ export class BoardComponent implements OnInit {
       this.doneBoard[i].object.Category = 'done';
     }
   }
+
+  deletePos(event: any, tasks: any) {
+    console.log(event, tasks);
+    this.dragedTask = tasks;
+    let collRef = collection(this.firestore, 'tasks');
+    let docRef = doc(collRef, this.dragedTask.customIdName);
+    console.log(this.dragedTask);
+    deleteDoc(docRef);
+  }
+
+  // editTask(event: any, tasks: any) {
+  //   this.dialog.open(EditUserComponent)
+  // }
 
 
 }
