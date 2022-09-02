@@ -1,4 +1,40 @@
 .header {
+    background-color: #4589FF;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+    .leftSide {
+        margin-left: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .leftSide img {
+        height: 100%;
+        width: 40px;
+        object-fit: cover;
+    }
+
+    .rightSide {
+        display: flex;
+        align-items: center;
+
+        img {
+            object-fit: contain;
+        }
+
+        .margin {
+            margin-left: 32px;
+            margin-right: 32px;
+        }
+
+        .user {
+            height: 100%;
+            width: 40px;
+            border: solid 3px white;
+            border-radius: 100%;
+        }
+    }
+
 }

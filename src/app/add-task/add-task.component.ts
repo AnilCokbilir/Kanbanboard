@@ -14,8 +14,9 @@ export class AddTaskComponent implements OnInit {
   urgencies = ['Low', 'Medium', 'High'];
   assignes = ['Anil Cokbilir', 'Florian Rehm', 'Junus Ergin', 'Kevin Wißmer', 'Mihai-Andrei Neacsu'];
   assignInput: any;
-  title!: string;
+  title: string;
   description!: string;
+  amount: number;
   dateInput!: any;
   urgency: any;
   urgencyInput: any;
@@ -34,15 +35,13 @@ export class AddTaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-
-
   save() {
+
     let object = {
       'Title': this.title,
       'Description': this.description,
       'Assigned': this.assignInput,
-      'Date': new Date(this.dateInput).toLocaleString('en-GB'),
+      'Date': this.dateInput,
       'Urgency': this.urgencyInput,
       'Category': 'todo',
     }

@@ -35,13 +35,17 @@
             </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="fill">
+        <input class="date" type="date" name="date" [(ngModel)]="dateInput">
+
+        <!-- <mat-form-field appearance="fill">
             <mat-label>Choose a date</mat-label>
-            <input matInput [matDatepicker]="picker" [(ngModel)]="dateInput" name="dateInput">
+            <input matInput [matDatepicker]="picker" [(ngModel)]="dateInput" name=" dateInput">
             <mat-hint>MM/DD/YYYY</mat-hint>
+
+
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
+        </mat-form-field> -->
         <button mat-stroked-button type="submit" color="primary">Save</button>
     </div>
 </form>

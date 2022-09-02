@@ -27,6 +27,8 @@ import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { ImprintComponent } from './imprint/imprint.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { SideNavComponent } from './side-nav/side-nav.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,8 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     BacklogComponent,
     BoardComponent,
     ImprintComponent,
-    EditUserComponent
+    EditUserComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +56,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     FormsModule,
     MatCardModule,
     DragDropModule,
+
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
@@ -60,7 +64,10 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 
 
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
+  ],
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

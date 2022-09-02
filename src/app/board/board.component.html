@@ -2,8 +2,11 @@
     <div class="example-container">
         <h2>To do</h2>
 
-        <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todoBoard" [cdkDropListConnectedTo]="[doneList, inprogressList, testingList, todoList]" class="example-list" (cdkDropListDropped)="drop($event)">
-            <div (cdkDragStarted)="onDragStarted($event, task)" *ngFor="let task of todoBoard; let i = index" class="{{task.object.Urgency}} example-box" cdkDrag>
+        <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todoBoard"
+            [cdkDropListConnectedTo]="[doneList, inprogressList, testingList, todoList]" class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div (cdkDragStarted)="onDragStarted($event, task)" *ngFor="let task of todoBoard; let i = index"
+                class="{{task.object.Urgency}} example-box" cdkDrag>
                 <div class="initials">{{test(task)}}</div>
                 <div class="icons">
                     <mat-icon (click)="deletePos($event, task)">delete_outline</mat-icon>
@@ -21,8 +24,11 @@
     <div class="example-container">
         <h2>In Progress</h2>
 
-        <div cdkDropList #inprogressList="cdkDropList" [cdkDropListData]="inprogressBoard" [cdkDropListConnectedTo]="[doneList, inprogressList, testingList, todoList]" class="example-list" (cdkDropListDropped)="drop($event)">
-            <div (cdkDragStarted)="onDragStarted($event, task)" *ngFor="let task of inprogressBoard; let i = index" class="{{task.object.Urgency}} example-box" cdkDrag>
+        <div cdkDropList #inprogressList="cdkDropList" [cdkDropListData]="inprogressBoard"
+            [cdkDropListConnectedTo]="[doneList, inprogressList, testingList, todoList]" class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div (cdkDragStarted)="onDragStarted($event, task)" *ngFor="let task of inprogressBoard; let i = index"
+                class="{{task.object.Urgency}} example-box" cdkDrag>
                 <div class="initials">{{test(task)}}</div>
                 <div class="icons">
                     <mat-icon (click)="deletePos($event, task)">delete_outline</mat-icon>
@@ -38,8 +44,11 @@
     <div class="example-container">
         <h2>Testing</h2>
 
-        <div cdkDropList #testingList="cdkDropList" [cdkDropListData]="testingBoard" [cdkDropListConnectedTo]="[doneList, inprogressList, testingList, todoList]" class="example-list" (cdkDropListDropped)="drop($event)">
-            <div (cdkDragStarted)="onDragStarted($event, task)" *ngFor="let task of testingBoard; let i = index" class="{{task.object.Urgency}} example-box" cdkDrag>
+        <div cdkDropList #testingList="cdkDropList" [cdkDropListData]="testingBoard"
+            [cdkDropListConnectedTo]="[doneList, inprogressList, testingList, todoList]" class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div (cdkDragStarted)="onDragStarted($event, task)" *ngFor="let task of testingBoard; let i = index"
+                class="{{task.object.Urgency}} example-box" cdkDrag>
                 <div class="initials">{{test(task)}}</div>
                 <div class="icons">
                     <mat-icon (click)="deletePos($event, task)">delete_outline</mat-icon>
@@ -55,8 +64,11 @@
     <div class="example-container">
         <h2>Done</h2>
 
-        <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="doneBoard" [cdkDropListConnectedTo]="[doneList, inprogressList, testingList, todoList]" class="example-list" (cdkDropListDropped)="drop($event)">
-            <div (cdkDragStarted)="onDragStarted($event, task)" *ngFor="let task of doneBoard; let i = index" class="{{task.object.Urgency}} example-box" cdkDrag>
+        <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="doneBoard"
+            [cdkDropListConnectedTo]="[doneList, inprogressList, testingList, todoList]" class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div (cdkDragStarted)="onDragStarted($event, task)" *ngFor="let task of doneBoard; let i = index"
+                class="{{task.object.Urgency}} example-box" cdkDrag>
                 <div class="initials">{{test(task)}}</div>
                 <div class="icons">
                     <mat-icon (click)="deletePos($event, task)">delete_outline</mat-icon>
