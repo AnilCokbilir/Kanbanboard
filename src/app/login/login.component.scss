@@ -1,0 +1,210 @@
+.firstPic {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    animation: firstPic 1s ease-in forwards;
+    overflow: hidden;
+}
+
+.secondPic {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: secPic 0.7s ease-in forwards;
+}
+
+.loginSystem {
+    animation: login 4s ease forwards;
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loginContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 35px 0px;
+        gap: 35px;
+        width: 652px;
+        height: 400px;
+        /* white */
+        background: #FFFFFF;
+        /* shadoe backlog box */
+        box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.08);
+        border-radius: 30px;
+        span {
+            border-bottom: solid 2px #4589FF;
+            padding-bottom: 16px;
+            height: 58px;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 120%;
+            /* identical to box height, or 58px */
+            text-align: center;
+            color: #000000;
+        }
+        .email {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 13px 21px;
+            gap: 10px;
+            width: 422px;
+            height: 49px;
+            background: #FFFFFF;
+            /* Style */
+            border-color: transparent;
+            border-bottom: 1px solid #D1D1D1;
+            /* Inside auto layout */
+            flex: none;
+            outline: 0;
+            order: 0;
+            flex-grow: 0;
+            resize: none;
+            background-image: url(/assets/img/email.png);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+        .password {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 13px 21px;
+            gap: 10px;
+            width: 422px;
+            height: 49px;
+            background: #FFFFFF;
+            /* Style */
+            border-color: transparent;
+            border-bottom: 1px solid #D1D1D1;
+            /* Inside auto layout */
+            flex: none;
+            outline: 0;
+            order: 0;
+            flex-grow: 0;
+            resize: none;
+            background-image: url(/assets/img/password.png);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .login {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 35px;
+        gap: 10px;
+        width: 135px;
+        height: 48px;
+        /* Version 2/main color */
+        background: #4589FF;
+        border-radius: 8px;
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        /* identical to box height, or 28px */
+        color: #FFFFFF;
+        border-color: transparent;
+        cursor: pointer;
+        &:hover {
+            background: #2172ff;
+        }
+    }
+    .guest {
+        margin-left: 32px;
+        box-sizing: border-box;
+        /* Auto layout */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 35px;
+        gap: 10px;
+        width: max-content;
+        height: 48px;
+        /* white */
+        background: #FFFFFF;
+        border: 1px solid #647188;
+        border-radius: 8px;
+        /* Inside auto layout */
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        /* Version 2/t5 */
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        /* identical to box height, or 28px */
+        color: #647188;
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        cursor: pointer;
+        &:hover {
+            border-color: #4589FF;
+            color: #4589FF;
+        }
+    }
+}
+
+::placeholder {
+    color: rgba(128, 128, 128, 0.579);
+}
+
+@keyframes firstPic {
+    from {
+        z-index: 10;
+    }
+    to {
+        opacity: 0;
+        z-index: -5;
+    }
+}
+
+@keyframes secPic {
+    0% {
+        transform: scale(5);
+        top: 50%;
+        left: 50%;
+        rotate: 360deg;
+    }
+    to {
+        top: 2%;
+        left: 2%;
+        transform: scale(1);
+    }
+}
+
+@keyframes login {
+    from {}
+    to {
+        z-index: 999;
+    }
+}

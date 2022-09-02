@@ -28,7 +28,8 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { ImprintComponent } from './imprint/imprint.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
-import { SideNavComponent } from './side-nav/side-nav.component'
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { LoginComponent } from './login/login.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { SideNavComponent } from './side-nav/side-nav.component'
     BoardComponent,
     ImprintComponent,
     EditUserComponent,
-    SideNavComponent
+    SideNavComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
