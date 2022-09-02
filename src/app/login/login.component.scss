@@ -112,7 +112,6 @@
         align-items: center;
         padding: 10px 35px;
         gap: 10px;
-        width: 135px;
         height: 48px;
         /* Version 2/main color */
         background: #4589FF;
@@ -121,7 +120,7 @@
         flex: none;
         order: 0;
         flex-grow: 0;
-        font-family: 'Open Sans';
+        font-family: 'Open Sans' !important;
         font-style: normal;
         font-weight: 400;
         font-size: 23px;
