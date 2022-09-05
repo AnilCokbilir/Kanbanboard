@@ -31,6 +31,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { LoginComponent } from './login/login.component';
 import { SummaryComponent } from './summary/summary.component'
+
 @NgModule({
   declarations: [
     AppComponent,

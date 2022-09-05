@@ -6,10 +6,10 @@
 <div class="loginSystem">
     <div class="loginContainer">
         <span>Log in</span>
-        <input class="email" placeholder="Email" type="email">
-        <input class="password" placeholder="Password" type="password">
+        <input class="email" placeholder="Email" type="email" [(ngModel)]="email">
+        <input class="password" placeholder="Password" type="password" [(ngModel)]="password">
         <div class="buttons">
-            <button class="login">Log in</button>
+            <button class="login" (click)="log()">Log in</button>
             <button class="guest">Guest log in</button>
         </div>
     </div>
