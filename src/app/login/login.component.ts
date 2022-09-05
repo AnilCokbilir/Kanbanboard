@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
