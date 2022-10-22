@@ -1,6 +1,11 @@
 <mat-toolbar class="header" color="primary">
-    <button routerLink="backlog" mat-button>Summary</button>
-    <button routerLink="board" mat-button>Board</button>
-    <button routerLink="addtask" mat-button>Add Task</button>
-    <button routerLink="imprint" mat-button>Contacts</button>
+    <div class="links">
+        <button routerLink="backlog" mat-button><img src="assets/img/summary.png" alt="addtask"><span>Summary</span></button>
+        <button routerLink="board" mat-button><img src="assets/img/board.png" alt=""><span>Board</span></button>
+        <button routerLink="addtask" mat-button><img src="assets/img/addTask.png" alt=""><span>Add Task</span></button>
+        <button routerLink="imprint" mat-button><img src="assets/img/contact.png" alt=""><span>Contacts</span></button>
+    </div>
+    <div class="legal">
+        <button routerLink="imprint" mat-button><img src="assets/img/info.png" alt=""><span>Legal notice</span></button>
+    </div>
 </mat-toolbar>

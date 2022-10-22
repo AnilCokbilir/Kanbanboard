@@ -1,7 +1,9 @@
-<app-header></app-header>
-<div class="flex">
-    <app-side-nav></app-side-nav>
-    <router-outlet></router-outlet>
+<ng-container *ngIf="allTasksArray.loggedIn">
+    <app-header></app-header>
+    <div class="flex">
+        <app-side-nav></app-side-nav>
+        <router-outlet></router-outlet>
 
-</div>
-<app-login></app-login>
+    </div>
+</ng-container>
+<app-login *ngIf="!(allTasksArray.loggedIn)"></app-login>
