@@ -65,7 +65,8 @@ import { SummaryComponent } from './summary/summary.component'
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+
 
 
   ],

@@ -4,10 +4,11 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { BacklogComponent } from './backlog/backlog.component';
 import { BoardComponent } from './board/board.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import { SummaryComponent } from './summary/summary.component';
 
 
 const routes: Routes = [
-  { path: 'backlog', component: BacklogComponent },
+  { path: 'summary', component: SummaryComponent },
   { path: 'addtask', component: AddTaskComponent },
   { path: 'board', component: BoardComponent },
   { path: 'imprint', component: ImprintComponent }
