@@ -2,20 +2,63 @@
     <div class="text">
         <span class="welcome">Welcome, <span class="name">Max Mustermann</span></span>
         <div class="info">
-            <div class="urgent">
-                <div class="column">
-                    <div class="flex"><img src="assets/img/urgent.png">
-                        <span class="urgentCount">{{allTasks.allTasksFire.length}}</span>
+            <div class="firstRow">
+                <div class="urgent">
+                    <div class="column">
+                        <div class="flex"><img src="assets/img/urgent.png">
+                            <span class="urgentCount">{{allTasks.allTasksFire.length}}</span>
+                        </div>
+                        <p>All Tasks</p>
                     </div>
-                    <p>Tasks Urgent</p>
-                </div>
-                <img src="assets/img/Vector 5.png" alt="">
-                <div class="column">
+                    <img src="assets/img/Vector 5.png" alt="">
+                    <div class="column">
 
-                    <span class="date">{{currentDate | date:'yyyy-MMMM-dd'}}</span>
-                    <span class="time">{{ now | date:'HH:mm:ss'}}</span>
+                        <span class="date">{{currentDate | date:'yyyy-MMMM-dd'}}</span>
+                        <span class="time">{{ now | date:'HH:mm:ss'}}</span>
+                    </div>
+                </div>
+                <div class="todo">
+                    <span class="firstRow">
+                        <img src="assets/img/boardSummary.png" alt="">
+                        <span class="counterTodo">{{todo.length}}</span>
+                    </span>
+                    <p>Tasks To-do</p>
+
                 </div>
             </div>
+            <div class="secondRow">
+                <div class="tasks">
+                    <div class="flex">
+                        <img src="assets/img/In Progress.png" alt="">
+                        <div class="counterTasks">
+                            {{progress.length}}
+                        </div>
+                    </div>
+                    <p>Task in Progress</p>
+
+                </div>
+                <div class="tasks">
+                    <div class="flex">
+                        <img src="assets/img/Done.png" alt="">
+                        <div class="counterTasks">
+                            {{testing.length}}
+                        </div>
+                    </div>
+                    <p>Task in Testing</p>
+
+                </div>
+                <div class="tasks">
+                    <div class="flex">
+                        <img src="assets/img/Awaiting feedback.png" alt="">
+                        <div class="counterTasks">
+                            {{done.length}}
+                        </div>
+                    </div>
+                    <p>Tasks Done</p>
+
+                </div>
+            </div>
+
         </div>
     </div>
 

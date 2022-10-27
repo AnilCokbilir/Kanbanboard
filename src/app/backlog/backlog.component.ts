@@ -18,7 +18,6 @@ export class BacklogComponent implements OnInit {
 
     const coll = collection(firestore, 'tasks');
     this.tasks$ = collectionData(coll, { idField: 'customIdName' });
-
     this.tasks$.subscribe((newTasks) => {
       newTasks = newTasks.map((t: any) => {
         t.object['customIdName'] = t.customIdName;
@@ -26,7 +25,6 @@ export class BacklogComponent implements OnInit {
       });
       console.log('Neue Tasks:', newTasks);
       this.allTasksFire = newTasks;
-
     })
   }
 

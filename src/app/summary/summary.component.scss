@@ -2,87 +2,148 @@
     width: 100%;
 }
 
-.summary {
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.summary {
     display: flex;
     justify-content: center;
     align-items: center;
     height: calc(100vh - 90px);
-
     .welcome {
         font-weight: 400;
         font-size: 48px;
     }
-
     .name {
         color: #4589FF;
         font-style: normal;
         font-weight: 700;
         font-size: 64px;
     }
-
     .info {
-        .urgent {
-            padding: 28px 48px;
-            /* Version 2/main color */
-
-            background: #4589FF;
-            /* nuevo */
-
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
-            border-radius: 30px;
+        margin-top: 64px;
+        .firstRow {
             display: flex;
             align-items: center;
-            justify-content: space-around;
-
-            .column {
+            justify-content: space-between;
+            .urgent {
+                width: 600px;
+                height: 160px;
+                padding: 28px 48px;
+                /* Version 2/main color */
+                background: #4589FF;
+                /* nuevo */
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+                border-radius: 30px;
                 display: flex;
-                flex-direction: column;
                 align-items: center;
-                color: white;
-
-                .time {
-                    font-weight: 400;
-                    font-size: 23px;
-                    margin-top: 32px;
-                }
-
-                .date {
-
-                    font-weight: 700;
-                    font-size: 33px;
-                }
-
-                .flex {
+                justify-content: space-around;
+                .column {
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
-
+                    color: white;
+                    .time {
+                        font-weight: 400;
+                        font-size: 23px;
+                        margin-top: 32px;
+                    }
+                    .date {
+                        font-weight: 700;
+                        font-size: 33px;
+                    }
                     img {
                         height: 80px;
                         width: 80px;
                         border: solid 4px white;
                         border-radius: 100%;
                     }
-
                     .urgentCount {
                         color: white;
                         margin-left: 32px;
                         font-weight: 700;
                         font-size: 48px;
                     }
-                }
-
-                p {
-                    margin-top: 16px;
-                    font-weight: 400;
-                    font-size: 23px;
-                    color: white;
+                    p {
+                        margin-top: 16px;
+                        font-weight: 400;
+                        font-size: 23px;
+                        color: white;
+                    }
                 }
             }
-
+            .todo {
+                margin-left: 32px;
+                padding: 28px 48px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 160px;
+                width: 160px;
+                background: #D2E3FF;
+                /* nuevo */
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+                border-radius: 30px;
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+                .counterTodo {
+                    margin-left: 32px;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 48px;
+                }
+                p {
+                    margin-top: 8px;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 23px;
+                    color: #4589FF;
+                }
+            }
         }
-
-
+        .secondRow {
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+            .tasks {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 28px 48px;
+                width: 160px;
+                height: 160px;
+                /* white */
+                background: #FFFFFF;
+                /* nuevo */
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+                border-radius: 30px;
+                .counterTasks {
+                    margin-left: 32px;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 48px;
+                }
+                p {
+                    text-align: center;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 23px;
+                    color: #4589FF;
+                    margin-top: 8px;
+                }
+            }
+        }
     }
-
 }

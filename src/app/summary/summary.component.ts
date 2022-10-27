@@ -10,6 +10,10 @@ import { DatePipe } from '@angular/common';
 
 })
 export class SummaryComponent implements OnInit {
+  todo: any;
+  progress: any;
+  testing: any;
+  done: any;
   now: number;
   currentDate = new Date();
   constructor(private firestore: Firestore, public allTasks: AlltasksService) {
@@ -25,6 +29,10 @@ export class SummaryComponent implements OnInit {
       this.now = Date.now();
     }, 1);
 
+    this.todo = this.allTasks.allTasksFire.filter(t => t.object.Category == 'todo');
+    this.progress = this.allTasks.allTasksFire.filter(t => t.object.Category == 'inprogress');
+    this.testing = this.allTasks.allTasksFire.filter(t => t.object.Category == 'testing');
+    this.done = this.allTasks.allTasksFire.filter(t => t.object.Category == 'done');
 
   }
 
