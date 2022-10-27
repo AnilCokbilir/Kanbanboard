@@ -1,16 +1,28 @@
+<div class="signup-container">
+  <span>Not a Join user?</span>
+  <button class="blue">Sign up</button>
+</div>
+
 <div class="animation">
-    <img class="firstPic" src="assets/img/loadscreen.png">
-    <img class="secondPic" src="assets/img/joinBlue.png" alt="" srcset="">
+  <img class="firstPic" src="assets/img/loadscreen.png">
+  <img class="secondPic" src="assets/img/joinBlue.png" alt="" srcset="">
 </div>
 
 <div class="loginSystem">
-    <div class="loginContainer">
-        <span>Log in</span>
-        <input class="email" placeholder="Email" type="email" [(ngModel)]="email">
-        <input class="password" placeholder="Password" type="password" [(ngModel)]="password">
-        <div class="buttons">
-            <button class="login" (click)="log()">Log in</button>
-            <button class="guest">Guest log in</button>
-        </div>
+  <div class="loginContainer">
+    <span>Log in</span>
+    <input class="email" placeholder="Email" type="email" [(ngModel)]="email">
+    <input class="password" placeholder="Password" type="password" [(ngModel)]="password">
+    <div class="remember-password-container">
+      <div class="remember-container">
+        <input type="checkbox">
+        <p>Remember me</p>
+      </div>
+      <a href="#">Forgot my password</a>
     </div>
+    <div class="buttons">
+      <button class="blue" (click)="log()">Log in</button>
+      <button class="guest">Guest log in</button>
+    </div>
+  </div>
 </div>
