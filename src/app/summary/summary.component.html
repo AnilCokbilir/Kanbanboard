@@ -1,1 +1,22 @@
-<p>summary works!</p>
+<div class="summary">
+    <div class="text">
+        <span class="welcome">Welcome, <span class="name">Max Mustermann</span></span>
+        <div class="info">
+            <div class="urgent">
+                <div class="column">
+                    <div class="flex"><img src="assets/img/urgent.png">
+                        <span class="urgentCount">{{allTasks.allTasksFire.length}}</span>
+                    </div>
+                    <p>Tasks Urgent</p>
+                </div>
+                <img src="assets/img/Vector 5.png" alt="">
+                <div class="column">
+
+                    <span class="date">{{currentDate | date:'yyyy-MMMM-dd'}}</span>
+                    <span class="time">{{ now | date:'HH:mm:ss'}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

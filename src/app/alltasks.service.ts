@@ -1,10 +1,23 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Firestore, collectionData, collection, setDoc, doc } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlltasksService {
-  tasks: any[] = [];
+  allTasksFire: any[] = [];
   loggedIn: boolean = false;
-  constructor() { }
+  tasks$: Observable<any>;
+  constructor(private firestore: Firestore) {
+    const coll: any = collection(firestore, 'tasks');
+    this.tasks$ = collectionData(coll);
+
+    this.tasks$.subscribe((newTasks) => {
+      console.log('Neue Tasks:', newTasks)
+      this.allTasksFire = newTasks;
+    })
+  }
+
+
 }
