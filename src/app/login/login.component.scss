@@ -4,12 +4,12 @@ $mainblue: #4589ff;
   position: absolute;
   display: flex;
   align-items: center;
-  top: 50px;
+  top: 75px;
   right: 75px;
   z-index: 10;
 
   span {
-    font-size: 16px;
+    font-size: 20px;
     margin-right: 32px;
   }
 }
@@ -25,9 +25,7 @@ $mainblue: #4589ff;
 
 .secondPic {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 75px;
   animation: secPic 0.7s ease-in forwards;
 }
 
@@ -47,7 +45,7 @@ $mainblue: #4589ff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 35px 0px;
+    padding: 32px;
     gap: 35px;
     width: 652px;
     height: 400px;
@@ -192,6 +190,7 @@ $mainblue: #4589ff;
     &:hover {
       border-color: #4589ff;
       color: #4589ff;
+      box-shadow: 0px 7px 15px -10px black;
     }
   }
 }
@@ -223,6 +222,7 @@ $mainblue: #4589ff;
 
   &:hover {
     background: #2172ff;
+    box-shadow: 0px 7px 15px -10px black;
   }
 }
 
@@ -250,8 +250,8 @@ $mainblue: #4589ff;
   }
 
   to {
-    top: 2%;
-    left: 2%;
+    top: 64px;
+    left: 64px;
     transform: scale(1);
   }
 }
@@ -262,5 +262,79 @@ $mainblue: #4589ff;
 
   to {
     z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .loginSystem {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .signup-container {
+    bottom: 75px;
+    top: unset;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    justify-content: center;
+
+    span {
+      font-size: 16px !important;
+    }
+
+    button {
+      padding-left: 16px;
+      padding-right: 16px;
+      font-size: 16px;
+    }
+  }
+
+  .buttons{
+
+    button{
+      font-size: 16px !important;
+      width: 100%;
+    }
+  }
+
+  .checkbox {
+    width: unset !important;
+  }
+
+  .email {
+    width: 100% !important;
+  }
+
+  .password {
+    width: 100% !important;
+  }
+
+  .loginContainer {
+    height: unset !important;
+  }
+
+  .remember-password-container {
+    flex-direction: column;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .guest {
+    margin-left: 0px !important;
+    margin-top: 24px !important;
+  }
+
+  .remember-password-container {
+    a {
+      padding-top: 24px;
+    }
   }
 }
