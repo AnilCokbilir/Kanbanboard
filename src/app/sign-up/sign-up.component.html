@@ -1,0 +1,17 @@
+<div class="animation">
+  <img class="logo" src="assets/img/joinWhite.png">
+</div>
+
+<div class="signupSystem">
+  <div class="signupContainer">
+    <img routerLink="/login" class="arrow" src="assets/img/arrow_blue.png">
+    <span>Sign Up</span>
+    <input class="name" placeholder="Name" type="name" [(ngModel)]="name">
+    <input class="email" placeholder="Email" type="email" [(ngModel)]="email">
+    <input class="password" placeholder="Password" type="password" [(ngModel)]="password">
+    <div class="buttons">
+      <button class="blue" (click)="signUp()">Sign Up</button>
+    </div>
+  </div>
+</div>
+

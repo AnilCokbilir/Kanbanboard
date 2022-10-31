@@ -30,7 +30,8 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { LoginComponent } from './login/login.component';
-import { SummaryComponent } from './summary/summary.component'
+import { SummaryComponent } from './summary/summary.component';
+import { SignUpComponent } from './sign-up/sign-up.component'
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { SummaryComponent } from './summary/summary.component'
     EditUserComponent,
     SideNavComponent,
     LoginComponent,
-    SummaryComponent
+    SummaryComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

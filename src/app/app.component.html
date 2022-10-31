@@ -6,4 +6,5 @@
 
     </div>
 </ng-container>
-<app-login *ngIf="!(allTasksArray.loggedIn)"></app-login>
+<app-login *ngIf="!(allTasksArray.loggedIn) && router.url !== '/signup'"></app-login>
+<app-sign-up *ngIf="router.url === '/signup'"></app-sign-up>

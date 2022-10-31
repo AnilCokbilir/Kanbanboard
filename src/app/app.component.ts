@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlltasksService } from './alltasks.service';
 
 @Component({
@@ -9,6 +10,6 @@ import { AlltasksService } from './alltasks.service';
 export class AppComponent {
   title = 'kanbanboard';
 
-  constructor(public allTasksArray: AlltasksService) { }
+  constructor(public allTasksArray: AlltasksService, public router: Router) { }
 
 }
