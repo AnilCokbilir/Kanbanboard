@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 170px);
     .welcome {
         font-weight: 400;
         font-size: 48px;
@@ -318,9 +318,9 @@
 }
 
 @media(max-width: 470px) {
-    .summary {
-        height: auto;
-    }
+    // .summary {
+    //     height: auto;
+    // }
     .info {
         margin-top: 16px !important
     }
@@ -337,5 +337,11 @@
     .tasks {
         width: 58px !important;
         margin-bottom: 2px !important;
+    }
+}
+
+@media(max-width: 380px) {
+    .summary {
+        height: auto;
     }
 }

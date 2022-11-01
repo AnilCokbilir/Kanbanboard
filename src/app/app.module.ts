@@ -31,7 +31,8 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { LoginComponent } from './login/login.component';
 import { SummaryComponent } from './summary/summary.component';
-import { SignUpComponent } from './sign-up/sign-up.component'
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { MobileNavComponent } from './mobile-nav/mobile-nav.component'
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { SignUpComponent } from './sign-up/sign-up.component'
     SideNavComponent,
     LoginComponent,
     SummaryComponent,
-    SignUpComponent
+    SignUpComponent,
+    MobileNavComponent
   ],
   imports: [
     BrowserModule,
