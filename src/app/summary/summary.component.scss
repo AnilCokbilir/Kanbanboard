@@ -16,6 +16,7 @@
     .welcome {
         font-weight: 400;
         font-size: 48px;
+        margin-bottom: 64px;
     }
     .name {
         color: #4589FF;
@@ -25,6 +26,11 @@
     }
     .info {
         margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
         .firstRow {
             display: flex;
             align-items: center;
@@ -41,6 +47,12 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
+                &:hover {
+                    animation: hoverScale 225ms ease-in-out;
+                    background-color: rgb(0, 0, 205);
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
                 .column {
                     display: flex;
                     flex-direction: column;
@@ -88,6 +100,26 @@
                 /* nuevo */
                 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
                 border-radius: 30px;
+                &:hover {
+                    animation: hoverScale 225ms ease-in-out;
+                    background-color: #4589FF;
+                    cursor: pointer;
+                    transform: scale(1.05);
+                    p {
+                        color: white;
+                    }
+                    .counterTodo {
+                        color: white;
+                    }
+                    img {
+                        border: solid 4px white;
+                        border-radius: 100%;
+                    }
+                }
+                .firstRowTodo {
+                    display: flex;
+                    align-items: center;
+                }
                 img {
                     width: 100px;
                     height: 100px;
@@ -124,11 +156,23 @@
                 padding: 28px 48px;
                 width: 160px;
                 height: 160px;
+                margin-left: 16px;
+                margin-right: 16px;
                 /* white */
                 background: #FFFFFF;
                 /* nuevo */
                 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
                 border-radius: 30px;
+                &:hover {
+                    animation: hoverScale 225ms ease-in-out;
+                    background-color: #D2E3FF;
+                    cursor: pointer;
+                    transform: scale(1.05);
+                    // img {
+                    //     border: solid 4px black;
+                    //     border-radius: 100%;
+                    // }
+                }
                 .counterTasks {
                     margin-left: 32px;
                     font-style: normal;
@@ -145,5 +189,153 @@
                 }
             }
         }
+    }
+}
+
+@keyframes hoverScale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@media(max-width: 1300px) {
+    .info {
+        margin-top: 0 !important
+    }
+    .firstRow {
+        flex-direction: column;
+    }
+    .urgent {
+        height: 100px !important;
+    }
+    .todo {
+        flex-direction: row !important;
+        justify-content: space-around;
+        margin-top: 64px;
+        width: 600px !important;
+        margin-left: 0 !important;
+        height: 100px !important;
+        p {
+            margin-left: 32px !important;
+        }
+    }
+    .tasks {
+        margin-top: 64px;
+        margin-left: 16px;
+        margin-right: 16px;
+        height: 100px !important;
+    }
+    .secondRow {
+        flex-wrap: wrap;
+        justify-content: center !important;
+        margin-top: 0 !important;
+    }
+    .welcome {
+        display: none;
+    }
+}
+
+@media(max-width:1100px) {
+    .todo {
+        margin-top: 32px !important;
+    }
+    .tasks {
+        margin-top: 32px !important;
+    }
+}
+
+@media(max-width: 970px) {
+    .summary {
+        align-items: unset !important;
+    }
+}
+
+@media(max-width: 860px) {
+    img {
+        height: 65px !important;
+        width: 65px !important;
+    }
+    p {
+        font-size: 20px !important;
+    }
+    .urgentCount {
+        font-size: 36px !important;
+    }
+    .counterTodo {
+        font-size: 36px !important;
+    }
+    .counterTasks {
+        font-size: 36px !important;
+    }
+    .vector {
+        width: 4px !important;
+        height: 100% !important;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .date {
+        font-size: 15px !important;
+    }
+    .time {
+        font-size: 20px !important;
+    }
+    .urgent {
+        width: 300px !important;
+        height: 80px !important;
+    }
+    .todo {
+        width: 300px !important;
+        height: 80px !important;
+    }
+    .tasks {
+        height: 80px !important;
+    }
+}
+
+@media(max-width: 720px) {
+    .urgent {
+        width: 300px !important;
+    }
+    .todo {
+        width: 300px !important;
+    }
+}
+
+@media(max-width: 600px) {
+    // .summary {
+    //     height: auto;
+    // }
+    .tasks {
+        width: 99px !important;
+        margin-bottom: 2px !important;
+    }
+    .info {
+        margin-top: 32px;
+    }
+}
+
+@media(max-width: 470px) {
+    .summary {
+        height: auto;
+    }
+    .info {
+        margin-top: 16px !important
+    }
+    .urgent {
+        width: 275px !important;
+        .date {
+            font-size: 13px !important;
+        }
+    }
+    .todo {
+        width: 100px !important;
+        flex-direction: column !important;
+    }
+    .tasks {
+        width: 58px !important;
+        margin-bottom: 2px !important;
     }
 }

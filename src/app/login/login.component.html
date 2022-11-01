@@ -1,28 +1,28 @@
 <div class="signup-container">
-  <span>Not a Join user?</span>
-  <button routerLink="/signup" class="blue">Sign up</button>
+    <span>Not a Join user?</span>
+    <button routerLink="/signup" class="blue">Sign up</button>
 </div>
 
 <div class="animation">
-  <img class="firstPic" src="assets/img/loadscreen.png">
-  <img class="secondPic" src="assets/img/joinBlue.png">
+    <img class="firstPic" src="assets/img/loadscreen.png">
+    <img class="secondPic" src="assets/img/joinBlue.png">
 </div>
 
 <div class="loginSystem">
-  <div class="loginContainer">
-    <span>Log in</span>
-    <input class="email" placeholder="Email" type="email" [(ngModel)]="email">
-    <input class="password" placeholder="Password" type="password" [(ngModel)]="password">
-    <div class="remember-password-container">
-      <div class="remember-container">
-        <input class="checkbox" type="checkbox">
-        <p>Remember me</p>
-      </div>
-      <a href="#">Forgot my password</a>
+    <div class="loginContainer">
+        <span>Log in</span>
+        <input class="email" placeholder="Email" type="email" [(ngModel)]="email">
+        <input class="password" placeholder="Password" type="password" [(ngModel)]="password">
+        <div class="remember-password-container">
+            <div class="remember-container">
+                <input class="checkbox" type="checkbox">
+                <p>Remember me</p>
+            </div>
+            <a href="#">Forgot my password</a>
+        </div>
+        <div class="buttons">
+            <button class="blue" (click)="log()" routerLink="summary">Log in</button>
+            <button class="guest">Guest log in</button>
+        </div>
     </div>
-    <div class="buttons">
-      <button class="blue" (click)="log()">Log in</button>
-      <button class="guest">Guest log in</button>
-    </div>
-  </div>
 </div>

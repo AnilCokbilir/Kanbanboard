@@ -10,15 +10,15 @@
                         </div>
                         <p>All Tasks</p>
                     </div>
-                    <img src="assets/img/Vector 5.png" alt="">
+                    <img class="vector" src="assets/img/Vector 5.png" alt="">
                     <div class="column">
 
-                        <span class="date">{{currentDate | date:'yyyy-MMMM-dd'}}</span>
+                        <span class="date">{{currentDate | date:'yyyy MMMM dd'}}</span>
                         <span class="time">{{ now | date:'HH:mm:ss'}}</span>
                     </div>
                 </div>
                 <div class="todo">
-                    <span class="firstRow">
+                    <span class="firstRowTodo">
                         <img src="assets/img/boardSummary.png" alt="">
                         <span class="counterTodo">{{todo.length}}</span>
                     </span>
@@ -34,7 +34,7 @@
                             {{progress.length}}
                         </div>
                     </div>
-                    <p>Task in Progress</p>
+                    <p>Tasks in Progress</p>
 
                 </div>
                 <div class="tasks">
@@ -44,7 +44,7 @@
                             {{testing.length}}
                         </div>
                     </div>
-                    <p>Task in Testing</p>
+                    <p>Tasks in Testing</p>
 
                 </div>
                 <div class="tasks">
