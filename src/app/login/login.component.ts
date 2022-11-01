@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { AlltasksService } from '../alltasks.service';
 
@@ -10,7 +11,7 @@ import { AlltasksService } from '../alltasks.service';
 export class LoginComponent implements OnInit {
   email: any;
   password: any;
-  constructor(private allTasksService: AlltasksService) { }
+  constructor(private allTasksService: AlltasksService, public router:Router) { }
 
   ngOnInit(): void {
 
@@ -21,10 +22,11 @@ export class LoginComponent implements OnInit {
 
 
       this.allTasksService.loggedIn = true;
+      this.router.navigateByUrl('/summary')
       const auth = getAuth();
       createUserWithEmailAndPassword(auth, this.email, this.password)
         .then((userCredential) => {
-          // Signed in 
+          // Signed in
           const user = userCredential.user;
           // ...
         })
