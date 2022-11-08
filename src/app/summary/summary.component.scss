@@ -8,6 +8,11 @@
     justify-content: center;
 }
 
+.newTask {
+    background-color: #4589FF !important;
+
+}
+
 .summary {
     display: flex;
     justify-content: center;
@@ -17,7 +22,7 @@
     .welcome {
         font-weight: 400;
         font-size: 48px;
-        margin-bottom: 64px;
+
     }
 
     .name {
@@ -33,7 +38,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100%;
+
 
         .firstRow {
             display: flex;
@@ -42,7 +47,7 @@
 
             .urgent {
                 width: 600px;
-                height: 160px;
+                height: 126px;
                 padding: 28px 48px;
                 /* Version 2/main color */
                 background: #4589FF;
@@ -107,7 +112,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                height: 160px;
+                height: 126px;
                 width: 160px;
                 background: #D2E3FF;
                 /* nuevo */
@@ -178,8 +183,8 @@
                 align-items: center;
                 justify-content: center;
                 padding: 28px 48px;
-                width: 160px;
-                height: 160px;
+                width: 126px;
+                height: 126px;
                 margin-left: 16px;
                 margin-right: 16px;
                 /* white */
@@ -230,6 +235,11 @@
 }
 
 @media(max-width: 1300px) {
+    .welcome {
+        margin-top: 32px !important;
+
+    }
+
     .info {
         margin-top: 0 !important
     }
@@ -240,12 +250,13 @@
 
     .urgent {
         height: 100px !important;
+        margin-top: 32px;
     }
 
     .todo {
         flex-direction: row !important;
         justify-content: space-around;
-        margin-top: 64px;
+        margin-top: 16px;
         width: 600px !important;
         margin-left: 0 !important;
         height: 100px !important;
@@ -256,37 +267,55 @@
     }
 
     .tasks {
-        margin-top: 64px;
+        margin-top: 16px;
         margin-left: 16px;
         margin-right: 16px;
         height: 100px !important;
+        width: 236px !important;
     }
 
     .secondRow {
         flex-wrap: wrap;
         justify-content: center !important;
         margin-top: 0 !important;
+        flex-direction: column;
     }
 
-    .welcome {
-        display: none;
-    }
+    .thirdRow {}
+
+
 }
 
-@media(max-width:1100px) {
-    .todo {
-        margin-top: 32px !important;
-    }
+@media(max-width:1250px) {}
 
-    .tasks {
-        margin-top: 32px !important;
-    }
-}
+@media(max-width:1100px) {}
 
 @media(max-width: 970px) {
+    .welcome {
+        font-size: 32px !important;
+    }
+
+    .name {
+        font-size: 32px !important;
+    }
+
     .summary {
         align-items: unset !important;
     }
+
+    .urgent {
+        height: 90px !important;
+    }
+
+    .todo {
+        height: 90px !important
+    }
+
+    .tasks {
+        height: 90px !important;
+    }
+
+
 }
 
 @media(max-width: 860px) {
@@ -327,12 +356,12 @@
     }
 
     .urgent {
-        width: 300px !important;
+
         height: 80px !important;
     }
 
     .todo {
-        width: 300px !important;
+
         height: 80px !important;
     }
 
@@ -348,6 +377,10 @@
 
     .todo {
         width: 300px !important;
+    }
+
+    .tasks {
+        width: 84px !important;
     }
 }
 
@@ -376,7 +409,7 @@
     }
 
     .urgent {
-        width: 275px !important;
+
 
         .date {
             font-size: 13px !important;
@@ -398,4 +431,14 @@
     .summary {
         height: auto;
     }
+}
+
+.card {
+    padding: 28px 48px;
+    background: #4589FF;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 16%);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }

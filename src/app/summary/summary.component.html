@@ -1,11 +1,12 @@
 <div class="summary">
-    <!-- <div class="text">
-        <span class="welcome">Welcome, <span class="name">Max Mustermann</span></span>
+    <div class="text">
+        <p class="welcome">Welcome to our<span class="name"> Summary</span></p>
         <div class="info">
             <div class="firstRow">
                 <div class="urgent">
                     <div class="column">
-                        <div class="flex"><img src="assets/img/urgent.png">
+                        <div class="flex">
+                            <img src="assets/img/urgent.png">
                             <span class="urgentCount">{{allTasks.allTasksFire.length}}</span>
                         </div>
                         <p>All Tasks</p>
@@ -27,50 +28,66 @@
                 </div>
             </div>
             <div class="secondRow">
-                <div class="tasks">
-                    <div class="flex">
-                        <img src="assets/img/In Progress.png" alt="">
-                        <div class="counterTasks">
-                            {{progress.length}}
+                <div class="flex">
+                    <div class="tasks">
+                        <div class="flex">
+                            <img src="assets/img/In Progress.png" alt="">
+                            <div class="counterTasks">
+                                {{progress.length}}
+                            </div>
                         </div>
-                    </div>
-                    <p>Tasks in Progress</p>
+                        <p>Tasks in Progress</p>
 
+                    </div>
+
+                    <div class="tasks">
+                        <div class="flex">
+                            <img src="assets/img/Done.png" alt="">
+                            <div class="counterTasks">
+                                {{testing.length}}
+                            </div>
+                        </div>
+                        <p>Tasks in Testing</p>
+
+                    </div>
                 </div>
-                <div class="tasks">
-                    <div class="flex">
-                        <img src="assets/img/Done.png" alt="">
-                        <div class="counterTasks">
-                            {{testing.length}}
+                <div class="flex">
+                    <div class="tasks">
+                        <div class="flex">
+                            <img src="assets/img/Awaiting feedback.png" alt="">
+                            <div class="counterTasks">
+                                {{done.length}}
+                            </div>
                         </div>
-                    </div>
-                    <p>Tasks in Testing</p>
+                        <p>Tasks Done</p>
 
-                </div>
-                <div class="tasks">
-                    <div class="flex">
-                        <img src="assets/img/Awaiting feedback.png" alt="">
-                        <div class="counterTasks">
-                            {{done.length}}
-                        </div>
                     </div>
-                    <p>Tasks Done</p>
-
+                    <div class="tasks newTask">
+                        <p class="bold">Create a new Task</p>
+                    </div>
                 </div>
             </div>
 
-        </div>
-    </div> -->
 
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
 
-            <span class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's
-                content.</span>
 
         </div>
     </div>
+
+    <!-- <div class="card blue" style="width: 18rem;">
+        <div class="card-body flex align-middle">
+            <div class="flex">
+                <img src="assets/img/urgent.png">
+                <span class="urgentCount">{{allTasks.allTasksFire.length}}</span>
+            </div>
+            <img class="vector" src="assets/img/Vector 5.png" alt="">
+            <div class="column">
+
+                <span class="date">{{currentDate | date:'yyyy MMMM dd'}}</span>
+                <span class="time">{{ now | date:'HH:mm:ss'}}</span>
+            </div>
+        </div>
+    </div> -->
 
 
 </div>
