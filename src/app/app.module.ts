@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FormsModule } from '@angular/forms';
 import { BacklogComponent } from './backlog/backlog.component';
 import { MatCardModule } from '@angular/material/card';
@@ -32,7 +33,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { LoginComponent } from './login/login.component';
 import { SummaryComponent } from './summary/summary.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { MobileNavComponent } from './mobile-nav/mobile-nav.component'
+import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { MobileNavComponent } from './mobile-nav/mobile-nav.component'
     LoginComponent,
     SummaryComponent,
     SignUpComponent,
-    MobileNavComponent
+    MobileNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +63,7 @@ import { MobileNavComponent } from './mobile-nav/mobile-nav.component'
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
+    MatButtonToggleModule,
     FormsModule,
     MatCardModule,
     DragDropModule,
@@ -70,14 +72,8 @@ import { MobileNavComponent } from './mobile-nav/mobile-nav.component'
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-
-
-
   ],
-  providers: [
-    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
-  ],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'en-GB' }],
   bootstrap: [AppComponent],
-
 })
-export class AppModule { }
+export class AppModule {}
