@@ -33,7 +33,13 @@
     <section>
       <h4>Button Toggle inside of a Template-driven form</h4>
       <mat-button-toggle-group ngModel #urgencyInput="ngModel" name="urgencyInput" aria-label="Font Style">
-        <mat-button-toggle *ngFor="let urgency of urgencies" [value]="urgency">{{urgency.text}} <img [src]="urgencyInput.value == urgency.text ? urgency.imgColor : urgency.imgWhite"></mat-button-toggle>
+        <mat-button-toggle *ngFor="let urgency of urgencies" [value]="urgency" (click)="selected = urgency.text"
+
+          >
+          <!-- [style.background]="urgencyInput.value.text == urgency.text ? '#FFF':'urgency.bgColor'" -->
+          {{urgency.text}}
+          <img [src]="urgencyInput.value.text == urgency.text ? urgency.imgWhite : urgency.imgColor">
+        </mat-button-toggle>
         <!-- <mat-button-toggle value="bold">Bold</mat-button-toggle>
         <mat-button-toggle value="italic">Italic</mat-button-toggle>
         <mat-button-toggle value="underline">Underline</mat-button-toggle> -->
@@ -43,8 +49,8 @@
     <!-- <mat-form-field appearance="fill">
       <mat-label>Urgency</mat-label>
       <mat-select ngModel #urgencyInput="ngModel" name="urgencyInput"> -->
-        <!-- <mat-select [(ngModel)]="urgencyInput" name="urgencyInput"> -->
-        <!-- <mat-option *ngFor="let urgency of urgencies" [value]="urgency">
+    <!-- <mat-select [(ngModel)]="urgencyInput" name="urgencyInput"> -->
+    <!-- <mat-option *ngFor="let urgency of urgencies" [value]="urgency">
           {{urgency}}
         </mat-option>
       </mat-select>

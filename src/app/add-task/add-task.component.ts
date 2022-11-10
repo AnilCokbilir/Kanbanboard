@@ -24,16 +24,19 @@ export class AddTaskComponent implements OnInit {
       text: 'High',
       imgColor: '../../assets/img/highRed.png',
       imgWhite: '../../assets/img/highWhite.png',
+      bgColor: '#FF3D00',
     },
     {
       text: 'Medium',
       imgColor: '../../assets/img/mediumYellow.png',
       imgWhite: '../../assets/img/mediumWhite.png',
+      bgColor: '#FFA800',
     },
     {
       text: 'Low',
       imgColor: '../../assets/img/lowGreen.png',
       imgWhite: '../../assets/img/lowWhite.png',
+      bgColor: '#7AE229',
     },
   ];
   assignes = [
@@ -50,6 +53,7 @@ export class AddTaskComponent implements OnInit {
   dateInput!: any;
   urgency: any;
   urgencyInput: any;
+  selected: string;
 
   @ViewChild('addTaskForm') addTaskForm: NgForm;
 
