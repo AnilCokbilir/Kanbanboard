@@ -1,12 +1,18 @@
 <mat-toolbar class="header" color="primary">
     <div class="links">
-        <button routerLink="summary" mat-button><img src="assets/img/summary.png"
-                alt="addtask"><span>Summary</span></button>
-        <button routerLink="board" mat-button><img src="assets/img/board.png" alt=""><span>Board</span></button>
-        <button routerLink="addtask" mat-button><img src="assets/img/addTask.png" alt=""><span>Add Task</span></button>
-        <button routerLink="imprint" mat-button><img src="assets/img/contact.png" alt=""><span>Contacts</span></button>
+        <button routerLink="summary" mat-button>
+            <img src="assets/img/summary.png" alt="addtask">
+            <span>Summary</span>
+        </button>
+        <button routerLink="board" mat-button class="column"><img src="assets/img/board.png"
+                alt=""><span>Board</span></button>
+        <button routerLink="addtask" mat-button class="column"><img src="assets/img/addTask.png" alt=""><span>Add
+                Task</span></button>
+        <button routerLink="imprint" mat-button class="column"><img src="assets/img/contact.png"
+                alt=""><span>Contacts</span></button>
     </div>
     <div class="legal">
-        <button routerLink="imprint" mat-button><img src="assets/img/info.png" alt=""><span>Legal notice</span></button>
+        <button routerLink="imprint" mat-button class="column"><img src="assets/img/info.png" alt=""><span>Legal
+                notice</span></button>
     </div>
 </mat-toolbar>
