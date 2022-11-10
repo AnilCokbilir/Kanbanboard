@@ -1,5 +1,9 @@
 $mainblue: #4589ff;
 
+.logo {
+  animation: logoAnimation 4s ease;
+}
+
 .signupSystem {
   position: absolute;
   top: 0;
@@ -12,6 +16,7 @@ $mainblue: #4589ff;
   background-color: $mainblue;
 
   .signupContainer {
+    animation: logoAnimation 2s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,7 +121,7 @@ $mainblue: #4589ff;
   }
 }
 
-.logo{
+.logo {
   position: absolute;
   top: 64px;
   left: 64px;
@@ -124,7 +129,7 @@ $mainblue: #4589ff;
   z-index: 1;
 }
 
-.arrow{
+.arrow {
   position: absolute;
   top: 32px;
   left: 32px;
@@ -175,7 +180,7 @@ $mainblue: #4589ff;
 
 @media (max-width: 576px) {
 
-  .name{
+  .name {
     width: 100% !important;
   }
 
@@ -191,10 +196,21 @@ $mainblue: #4589ff;
     height: unset !important;
   }
 
-  .arrow{
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  width: 25px;
+  .arrow {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 25px;
+  }
 }
+
+@keyframes logoAnimation {
+  0% {
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+  }
 }
