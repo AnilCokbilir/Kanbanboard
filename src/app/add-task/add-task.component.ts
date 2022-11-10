@@ -25,18 +25,24 @@ export class AddTaskComponent implements OnInit {
       imgColor: '../../assets/img/highRed.png',
       imgWhite: '../../assets/img/highWhite.png',
       bgColor: '#FF3D00',
+      className: 'high',
+      hovered: false,
     },
     {
       text: 'Medium',
       imgColor: '../../assets/img/mediumYellow.png',
       imgWhite: '../../assets/img/mediumWhite.png',
       bgColor: '#FFA800',
+      className: 'medium',
+      hovered: false,
     },
     {
       text: 'Low',
       imgColor: '../../assets/img/lowGreen.png',
       imgWhite: '../../assets/img/lowWhite.png',
       bgColor: '#7AE229',
+      className: 'low',
+      hovered: false,
     },
   ];
   assignes = [
@@ -78,24 +84,12 @@ export class AddTaskComponent implements OnInit {
       Urgency: this.addTaskForm.value.urgencyInput,
       Category: 'todo',
     };
-    console.log(object);
-    console.log(this.addTaskForm);
-    console.log(this.addTaskForm.value.urgencyInput);
 
+    const coll = collection(this.firestore, 'tasks');
+    setDoc(doc(coll), { object });
 
-    // let object = {
-    //   Title: this.title,
-    //   Description: this.description,
-    //   Assigned: this.assignInput,
-    //   Date: this.dateInput,
-    //   Urgency: this.urgencyInput,
-    //   Category: 'todo',
-    // };
-    // const coll = collection(this.firestore, 'tasks');
-    // setDoc(doc(coll), { object });
-
-    // // this.allTasks.tasks.push(object)
-    // // console.log(this.allTasks.tasks)
+    // this.allTasks.tasks.push(object)
+    // console.log(this.allTasks.tasks)
 
     // this.title = '';
     // this.description = '';
