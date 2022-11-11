@@ -1,4 +1,3 @@
-
 <form class="form" (submit)="save()" #addTaskForm="ngForm">
   <div class="border">
     <mat-form-field appearance="legacy">
@@ -26,24 +25,33 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
-      <mat-button-toggle-group ngModel #urgencyInput="ngModel" name="urgencyInput" aria-label="Font Style">
-        <mat-button-toggle *ngFor="let urgency of urgencies" [value]="urgency"
-          [ngClass]="urgencyInput?.value?.text == urgency?.text ? urgency?.className : ''"
-          (mouseover)="urgency.hovered = true" (mouseleave)="urgency.hovered = false"
-          [style.borderBottom]="urgency.hovered ? '2px solid' : ''"
-          [style.borderBottomColor]="urgency.hovered ? urgency.bgColor : ''"
-          [style.color]="urgencyInput?.value?.text == urgency?.text ? '#fff':'#42526e'"
-          [style.fontWeight]="urgencyInput?.value?.text == urgency?.text ? 'bold':'normal'"
-          >
-          {{urgency.text}}
-          <img [src]="urgencyInput?.value?.text == urgency?.text ? urgency?.imgWhite : urgency?.imgColor">
-        </mat-button-toggle>
-      </mat-button-toggle-group>
+    <mat-form-field appearance="legacy">
+      <mat-label class="labels">Category</mat-label>
+      <mat-select name="categoryInput" ngModel #categoryInput="ngModel">
+        <mat-option>Neue Kategorie</mat-option>
+        <mat-option *ngFor="let category of categories" [value]="category">
+          <span>{{category.text}}</span>
+          <div class="point" [style.background]="category.color"></div>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-button-toggle-group ngModel #urgencyInput="ngModel" name="urgencyInput" aria-label="Font Style">
+      <mat-button-toggle *ngFor="let urgency of urgencies" [value]="urgency"
+        [ngClass]="urgencyInput?.value?.text == urgency?.text ? urgency?.className : ''"
+        (mouseover)="urgency.hovered = true" (mouseleave)="urgency.hovered = false"
+        [style.borderBottom]="urgency.hovered ? '2px solid' : ''"
+        [style.borderBottomColor]="urgency.hovered ? urgency.bgColor : ''"
+        [style.color]="urgencyInput?.value?.text == urgency?.text ? '#fff':'#42526e'"
+        [style.fontWeight]="urgencyInput?.value?.text == urgency?.text ? 'bold':'normal'">
+        {{urgency.text}}
+        <img [src]="urgencyInput?.value?.text == urgency?.text ? urgency?.imgWhite : urgency?.imgColor">
+      </mat-button-toggle>
+    </mat-button-toggle-group>
 
     <mat-form-field appearance="legacy">
       <mat-label class="labels">Description</mat-label>
-      <textarea matInput placeholder="Type in your Description" ngModel #description="ngModel" name="description" required
-        min="3"></textarea>
+      <textarea matInput placeholder="Type in your Description" ngModel #description="ngModel" name="description"
+        required min="3"></textarea>
       <mat-error *ngIf="description.invalid && description.touched">This field is required!</mat-error>
     </mat-form-field>
 

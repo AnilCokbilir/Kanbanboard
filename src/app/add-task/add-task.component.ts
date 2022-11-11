@@ -52,6 +52,24 @@ export class AddTaskComponent implements OnInit {
     'Kevin Wißmer',
     'Mihai-Andrei Neacsu',
   ];
+  categories = [
+    {
+      text: 'Development',
+      color: '#2A3647',
+    },
+    {
+      text: 'Sales',
+      color: '#8AA4FF',
+    },
+    {
+      text: 'Design',
+      color: '#8AA4FF',
+    },
+    {
+      text: 'Backoffice',
+      color: '#1FD7C1',
+    },
+  ];
   assignInput: any;
   title: string;
   description!: string;
@@ -83,10 +101,13 @@ export class AddTaskComponent implements OnInit {
       Date: this.addTaskForm.value.date.toLocaleDateString('de-DE'),
       Urgency: this.addTaskForm.value.urgencyInput,
       Category: 'todo',
+      Section: this.addTaskForm.value.categoryInput,
     };
+    console.log(object);
 
-    const coll = collection(this.firestore, 'tasks');
-    setDoc(doc(coll), { object });
+
+    // const coll = collection(this.firestore, 'tasks');
+    // setDoc(doc(coll), { object });
 
     // this.allTasks.tasks.push(object)
     // console.log(this.allTasks.tasks)
