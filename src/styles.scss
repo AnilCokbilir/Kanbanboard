@@ -2,31 +2,54 @@
 
 html,
 body {
-    height: 100%;
-    font-family: 'Edu QLD Beginner', cursive;
+  height: 100%;
+  font-family: "Edu QLD Beginner", cursive;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .High {
-    background-color: rgba(255, 54, 67, 0.817) !important;
+  background-color: rgba(255, 54, 67, 0.817) !important;
 }
 
 .Medium {
-    background-color: rgba(255, 225, 0, 0.744) !important;
+  background-color: rgba(255, 225, 0, 0.744) !important;
 }
 
 .Low {
-    background-color: rgba(127, 255, 67, 0.768) !important;
+  background-color: rgba(127, 255, 67, 0.768) !important;
 }
 
 .flexbox {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .mat-toolbar-single-row {
-    height: 90px
+  height: 90px;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.bold {
+  font-weight: bold !important;
+  color: white !important;
+}
+
+.mat-button-toggle-label-content {
+  img {
+    margin: 0 8px;
+  }
+}
+
+.mat-button-toggle-focus-overlay {
+  display: none;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #fff !important;
 }

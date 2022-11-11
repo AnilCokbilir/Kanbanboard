@@ -249,7 +249,7 @@ $mainblue: #4589ff;
     rotate: 360deg;
   }
 
-  to {
+  100% {
     top: 64px;
     left: 64px;
     transform: scale(1);
@@ -257,8 +257,7 @@ $mainblue: #4589ff;
 }
 
 @keyframes login {
-  from {
-  }
+  from {}
 
   to {
     z-index: 1;
@@ -294,9 +293,9 @@ $mainblue: #4589ff;
     }
   }
 
-  .buttons{
+  .buttons {
 
-    button{
+    button {
       font-size: 16px !important;
       width: 100%;
     }
