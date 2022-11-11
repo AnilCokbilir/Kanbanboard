@@ -14,7 +14,6 @@ export class LoginComponent implements OnInit {
   constructor(private allTasksService: AlltasksService, public router:Router) { }
 
   ngOnInit(): void {
-
   }
 
   log() {
