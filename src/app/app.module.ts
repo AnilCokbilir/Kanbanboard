@@ -34,6 +34,7 @@ import { LoginComponent } from './login/login.component';
 import { SummaryComponent } from './summary/summary.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
     SummaryComponent,
     SignUpComponent,
     MobileNavComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,

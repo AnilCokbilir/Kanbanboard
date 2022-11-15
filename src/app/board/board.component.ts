@@ -14,7 +14,15 @@ import { EditUserComponent } from '../edit-user/edit-user.component';
 export class BoardComponent implements OnInit {
   dragedTask: any;
   tasks$: Observable<any>;
-  allTasksFire: any[] = [];
+  allTasksFire: any[] = [{
+    Title: 'this is a Title :)',
+    Description: 'this is a Description :)',
+    Assigned: 'Florian Rehm',
+    Date: new Date().getTime(),
+    Urgency: 'High',
+    Category: 'todo',
+    Section: 'Development',
+  }];
   done: any;
   doneList: any;
   todoList: any;
@@ -24,7 +32,7 @@ export class BoardComponent implements OnInit {
   doneBoard: any;
   inprogressBoard: any;
   testingBoard: any;
-  initials!: string; 
+  initials!: string;
 
   constructor(public alltasks: AlltasksService, public firestore: Firestore) {
 
@@ -47,7 +55,7 @@ export class BoardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.filterBoard()
   }
   test(tasks: any) {
     let string = tasks.object.Assigned.split(' ');

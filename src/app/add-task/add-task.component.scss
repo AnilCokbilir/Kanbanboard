@@ -51,10 +51,6 @@ mat-button-toggle-group {
     box-sizing: border-box;
     border-bottom: 2px solid transparent;
 
-    &:hover {
-      background-color: #fff;
-    }
-
     button {
       border-radius: 10px;
     }
@@ -86,4 +82,20 @@ mat-button-toggle-group {
 
 ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
   background-color: rgba(0, 0, 0, .15);
+}
+
+.point {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  // background-color: #7ae229;
+}
+
+::ng-deep .mat-option-text {
+  display: flex !important;
+  align-items: center;
+
+  div {
+    margin-left: 8px;
+  }
 }

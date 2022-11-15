@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { BacklogComponent } from './backlog/backlog.component';
 import { BoardComponent } from './board/board.component';
+import { ContactsComponent } from './contacts/contacts.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'summary', component: SummaryComponent },
   { path: 'addtask', component: AddTaskComponent },
   { path: 'board', component: BoardComponent },
+  { path: 'contacts', component: ContactsComponent },
   { path: 'imprint', component: ImprintComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'login', component: LoginComponent },
