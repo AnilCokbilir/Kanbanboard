@@ -1,0 +1,75 @@
+:host {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    height: calc(100vh - 90px);
+    width: 100%;
+}
+
+.leftSection {
+    width: 40%;
+    background-color: red;
+    height: 100%;
+    box-shadow: 5px 0px 17px 0px #000000;
+}
+
+.rightSection {
+    position: relative;
+    width: 60%;
+
+    height: 100%;
+
+    button {
+        position: absolute;
+        bottom: 64px;
+        right: 64px;
+
+        img {
+            width: 20px;
+            object-fit: cover;
+        }
+    }
+}
+
+.blur {
+    position: absolute;
+
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.63);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    .newContact {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 40%;
+
+        border-bottom-right-radius: 16px;
+
+        .top {
+            height: 35%;
+            background-color: #4589FF;
+            border-top-right-radius: 16px;
+        }
+
+        .bottom {
+            background-color: white;
+            height: 65%;
+            border-bottom-right-radius: 16px;
+        }
+
+        img {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            cursor: pointer;
+        }
+    }
+}
