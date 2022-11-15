@@ -1,4 +1,4 @@
-<ng-container *ngIf="allTasksArray.loggedIn">
+<!-- <ng-container *ngIf="allTasksArray.loggedIn">
     <app-header></app-header>
     <div class="flex">
         <ng-container>
@@ -10,4 +10,14 @@
     </div>
 </ng-container>
 <app-login *ngIf="!(allTasksArray.loggedIn) && router.url !== '/signup'"></app-login>
-<app-sign-up *ngIf="router.url === '/signup'"></app-sign-up>
+<app-sign-up *ngIf="router.url === '/signup'"></app-sign-up> -->
+
+<app-header></app-header>
+<div class="flex">
+  <ng-container>
+    <app-side-nav></app-side-nav>
+  </ng-container>
+
+  <app-board></app-board>
+
+</div>
