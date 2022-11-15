@@ -1,15 +1,36 @@
 <div class="wrapper">
     <div class="leftSection"></div>
     <div class="rightSection">
-        <button mat-stroked-button type="submit" color="primary">New Contact <img src="assets/img/addUser.png" alt=""
-                srcset=""></button>
+        <button mat-stroked-button type="submit" color="primary" (click)="openContactForm()">New Contact <img
+                src="assets/img/addUser.png" alt="" srcset=""></button>
     </div>
 </div>
+<ng-container *ngIf="opened">
+    <div class="blur">
+        <div class="newContact">
+            <img (click)="closeForm()" class="close" src="assets/img/close.png" alt="" srcset="">
+            <div class="top">
+                <img src="assets/img/joinWhite.png" alt="" srcset="">
+                <h3>Add Contact</h3>
+                <p>Tasks are better with a team!</p>
+            </div>
+            <div class="bottom">
 
-<div class="blur">
-    <div class="newContact">
-        <img src="assets/img/close.png" alt="" srcset="">
-        <div class="top"></div>
-        <div class="bottom"></div>
+                <img src="assets/img/userContact.png" alt="" srcset="">
+
+                <div class="inputfields">
+                    <input class="inputfield name" placeholder="Name" type="text">
+                    <input class="inputfield email" placeholder="Email" type="email">
+                    <input class="inputfield phone" placeholder="Phone" type="tel">
+                </div>
+
+
+                <div class="buttonBottom">
+                    <button class="white">Cancel</button>
+                    <button class="blue">Create Contact</button>
+                </div>
+
+            </div>
+        </div>
     </div>
-</div>
+</ng-container>

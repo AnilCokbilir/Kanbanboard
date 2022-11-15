@@ -35,13 +35,13 @@
 
 .blur {
     position: absolute;
-
     backdrop-filter: blur(2px);
     background-color: rgba(255, 255, 255, 0.63);
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
+
 
     .newContact {
 
@@ -50,26 +50,186 @@
         left: 0;
         bottom: 0;
         width: 40%;
-
+        animation: blurAnimation 400ms ease;
         border-bottom-right-radius: 16px;
+        overflow-x: hidden;
 
         .top {
             height: 35%;
             background-color: #4589FF;
             border-top-right-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+
+            img {
+                width: 70px;
+                height: 80px;
+            }
+
+            h3 {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 48px;
+                color: white;
+            }
+
+            p {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 27px;
+                color: white;
+            }
         }
 
         .bottom {
             background-color: white;
             height: 65%;
             border-bottom-right-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .buttonBottom {
+                display: flex;
+            }
+
+            .blue {
+                margin-left: 32px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 35px;
+                gap: 10px;
+                height: 48px;
+                /* Version 2/main color */
+                background: #4589ff;
+                border-radius: 8px;
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                font-family: "Open Sans" !important;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 23px;
+                line-height: 120%;
+                /* identical to box height, or 28px */
+                color: #ffffff;
+                border-color: transparent;
+                cursor: pointer;
+
+                &:hover {
+                    background: #2172ff;
+                    box-shadow: 0px 7px 15px -10px black;
+                }
+            }
+
+            .white {
+
+                box-sizing: border-box;
+                /* Auto layout */
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 35px;
+                gap: 10px;
+                width: max-content;
+                height: 48px;
+                /* white */
+                background: #ffffff;
+                border: 1px solid #647188;
+                border-radius: 8px;
+                /* Inside auto layout */
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+                /* Version 2/t5 */
+                font-family: "Open Sans";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 23px;
+                line-height: 120%;
+                /* identical to box height, or 28px */
+                color: #647188;
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                cursor: pointer;
+
+                &:hover {
+                    border-color: #4589ff;
+                    color: #4589ff;
+                    box-shadow: 0px 7px 15px -10px black;
+                }
+            }
+
+            .inputfield {
+                margin-top: 32px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 13px 21px;
+                gap: 10px;
+                width: 422px;
+                height: 49px;
+                background: #ffffff;
+                /* Style */
+                border-color: transparent;
+                border-bottom: 1px solid #d1d1d1;
+                /* Inside auto layout */
+                flex: none;
+                outline: 0;
+                order: 0;
+                flex-grow: 0;
+                resize: none;
+
+                background-repeat: no-repeat;
+                background-position: right;
+            }
+
+            .email {
+                background-image: url(/assets/img/email.png);
+            }
+
+            .name {
+                background-image: url(/assets/img/userInput.png);
+            }
+
+            .phone {
+                background-image: url(/assets/img/tel.png);
+            }
         }
 
-        img {
+        .close {
             position: absolute;
             right: 16px;
             top: 16px;
             cursor: pointer;
         }
     }
+}
+
+@keyframes blurAnimation {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes displayBlock {
+    0% {}
+
+    100% {}
 }
