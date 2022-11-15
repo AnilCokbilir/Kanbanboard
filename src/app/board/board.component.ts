@@ -24,7 +24,7 @@ export class BoardComponent implements OnInit {
   doneBoard: any;
   inprogressBoard: any;
   testingBoard: any;
-  initials!: string;
+  initials!: string; 
 
   constructor(public alltasks: AlltasksService, public firestore: Firestore) {
 
