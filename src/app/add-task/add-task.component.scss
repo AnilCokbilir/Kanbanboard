@@ -1,36 +1,101 @@
 h1 {
-    text-align: center;
-    margin-top: 64px;
+  text-align: center;
+  margin-top: 64px;
 }
 
 h4 {
-    text-align: center;
+  text-align: center;
 }
 
 .form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  mat-form-field {
     width: 100%;
+  }
+  .border {
+    border-radius: 8px;
     display: flex;
-    justify-content: center;
-    mat-form-field {
-        width: 250px;
-    }
-    .border {
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: max-content;
-        padding: 32px;
-    }
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    padding: 32px;
+  }
 }
 
 .date {
-    width: 100%;
-    height: 45px;
-    background-color: rgba(0, 0, 0, .04);
-    border-color: transparent;
-    color: gray;
-    margin-bottom: 1.34375em;
-    border-bottom-width: 1px;
-    border-bottom-color: gray;
+  width: 100%;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: transparent;
+  color: gray;
+  margin-bottom: 1.34375em;
+  border-bottom-width: 1px;
+  border-bottom-color: gray;
+}
+
+mat-button-toggle-group {
+  margin: 16px 0;
+  border: unset;
+  padding: 8px;
+  gap: 10px;
+
+  mat-button-toggle {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.16);
+    width: 115px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-bottom: 2px solid transparent;
+
+    button {
+      border-radius: 10px;
+    }
+  }
+}
+
+.high {
+  background: #ff3d00;
+  border-color: #ff3d00 !important;
+}
+.medium {
+  background: #ffa800;
+  border-color: #ffa800 !important;
+}
+.low {
+  background: #7ae229;
+  border-color: #7ae229 !important;
+}
+
+.labels {
+  color: #42526e;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline::before, ::ng-deep .mat-form-field-ripple {
+  background-color: rgba(66, 82, 110, .15);
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: rgba(0, 0, 0, .15);
+}
+
+.point {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  // background-color: #7ae229;
+}
+
+::ng-deep .mat-option-text {
+  display: flex !important;
+  align-items: center;
+
+  div {
+    margin-left: 8px;
+  }
 }

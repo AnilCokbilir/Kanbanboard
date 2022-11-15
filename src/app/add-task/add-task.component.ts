@@ -24,16 +24,25 @@ export class AddTaskComponent implements OnInit {
       text: 'High',
       imgColor: '../../assets/img/highRed.png',
       imgWhite: '../../assets/img/highWhite.png',
+      bgColor: '#FF3D00',
+      className: 'high',
+      hovered: false,
     },
     {
       text: 'Medium',
       imgColor: '../../assets/img/mediumYellow.png',
       imgWhite: '../../assets/img/mediumWhite.png',
+      bgColor: '#FFA800',
+      className: 'medium',
+      hovered: false,
     },
     {
       text: 'Low',
       imgColor: '../../assets/img/lowGreen.png',
       imgWhite: '../../assets/img/lowWhite.png',
+      bgColor: '#7AE229',
+      className: 'low',
+      hovered: false,
     },
   ];
   assignes = [
@@ -43,6 +52,24 @@ export class AddTaskComponent implements OnInit {
     'Kevin Wißmer',
     'Mihai-Andrei Neacsu',
   ];
+  categories = [
+    {
+      text: 'Development',
+      color: '#2A3647',
+    },
+    {
+      text: 'Sales',
+      color: '#8AA4FF',
+    },
+    {
+      text: 'Design',
+      color: '#8AA4FF',
+    },
+    {
+      text: 'Backoffice',
+      color: '#1FD7C1',
+    },
+  ];
   assignInput: any;
   title: string;
   description!: string;
@@ -50,6 +77,7 @@ export class AddTaskComponent implements OnInit {
   dateInput!: any;
   urgency: any;
   urgencyInput: any;
+  selected: string;
 
   @ViewChild('addTaskForm') addTaskForm: NgForm;
 
@@ -73,25 +101,16 @@ export class AddTaskComponent implements OnInit {
       Date: this.addTaskForm.value.date.toLocaleDateString('de-DE'),
       Urgency: this.addTaskForm.value.urgencyInput,
       Category: 'todo',
+      Section: this.addTaskForm.value.categoryInput,
     };
     console.log(object);
-    console.log(this.addTaskForm);
-    console.log(this.addTaskForm.value.urgencyInput);
 
 
-    // let object = {
-    //   Title: this.title,
-    //   Description: this.description,
-    //   Assigned: this.assignInput,
-    //   Date: this.dateInput,
-    //   Urgency: this.urgencyInput,
-    //   Category: 'todo',
-    // };
     // const coll = collection(this.firestore, 'tasks');
     // setDoc(doc(coll), { object });
 
-    // // this.allTasks.tasks.push(object)
-    // // console.log(this.allTasks.tasks)
+    // this.allTasks.tasks.push(object)
+    // console.log(this.allTasks.tasks)
 
     // this.title = '';
     // this.description = '';
