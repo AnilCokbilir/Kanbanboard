@@ -105,7 +105,11 @@ export class AddTaskComponent implements OnInit {
     };
     console.log(object);
 
+    const coll = collection(this.firestore, 'tasks');
+    setDoc(doc(coll), {object});
 
+    this.allTasks.allTasksFire.push(object);
+    this.addTaskForm.reset();
     // const coll = collection(this.firestore, 'tasks');
     // setDoc(doc(coll), { object });
 
