@@ -7,12 +7,12 @@
 </div>
 <ng-container *ngIf="opened">
     <div class="blur">
-        <div class="newContact">
+        <div [ngClass]="{'animatinoReverse': showTextContent}" class="newContact">
             <img (click)="closeForm()" class="close" src="assets/img/close.png" alt="" srcset="">
             <div class="top">
                 <img src="assets/img/joinWhite.png" alt="" srcset="">
-                <h3>Add Contact</h3>
-                <p>Tasks are better with a team!</p>
+                <h3 *ngIf="!showTextContent">Add Contact</h3>
+                <p *ngIf="!showTextContent">Tasks are better with a team!</p>
             </div>
             <div class="bottom">
 

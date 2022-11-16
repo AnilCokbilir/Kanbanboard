@@ -218,6 +218,11 @@
     }
 }
 
+.animatinoReverse {
+    animation: blurAnimationReverse 400ms !important;
+    overflow-x: hidden;
+}
+
 @keyframes blurAnimation {
     0% {
         width: 0;
@@ -225,6 +230,16 @@
 
     100% {
         width: 40%;
+    }
+}
+
+@keyframes blurAnimationReverse {
+    0% {
+        width: 40%;
+    }
+
+    100% {
+        width: 0;
     }
 }
 
