@@ -19,16 +19,24 @@
                 <img src="assets/img/userContact.png" alt="" srcset="">
 
                 <div class="inputfields">
-                    <input class="inputfield name" placeholder="Name" type="text">
-                    <input class="inputfield email" placeholder="Email" type="email">
-                    <input class="inputfield phone" placeholder="Phone" type="tel">
+                    <input (change)="checkTypes()" class="inputfield name" name="name" placeholder="Name" type="text"
+                        [(ngModel)]="contactName" required>
+                    <span *ngIf="contactName.length < 1">*Please type in your Name</span>
+                    <input (change)="checkTypes()" class="inputfield email" name="email" placeholder="Email"
+                        type="email" [(ngModel)]="contactEmail" required>
+                    <span *ngIf="!contactEmail">*Please type in your Email</span>
+                    <input (change)="checkTypes()" class="inputfield phone" name="phone" placeholder="Phone" type="tel"
+                        [(ngModel)]="contactPhone" required>
+                    <span *ngIf="!contactPhone">*Please type in your Phone</span>
                 </div>
-
 
                 <div class="buttonBottom">
                     <button class="white">Cancel</button>
-                    <button class="blue">Create Contact</button>
+                    <button class="blue" [class.disabled]="contactName.length < 1 || !contactEmail || !contactPhone"
+                        (click)="createContact()"
+                        [disabled]="contactName.length < 1 || !contactEmail || !contactPhone">Create Contact</button>
                 </div>
+
 
             </div>
         </div>
