@@ -34,6 +34,10 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
+    <div class="color-gen-container">
+      <button (click)="getColor()">Get Color</button>
+      <div class="gen-color" id="generatedColor"></div>
+    </div>
     <mat-button-toggle-group ngModel #urgencyInput="ngModel" name="urgencyInput" aria-label="Font Style">
       <mat-button-toggle *ngFor="let urgency of urgencies" [value]="urgency"
         [ngClass]="urgencyInput?.value?.text == urgency?.text ? urgency?.className : ''"

@@ -9,6 +9,7 @@ import {
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { NgForm } from '@angular/forms';
+import { asLiteral } from '@angular/compiler/src/render3/view/util';
 
 @Component({
   selector: 'app-add-task',
@@ -18,6 +19,8 @@ import { NgForm } from '@angular/forms';
 export class AddTaskComponent implements OnInit {
   tasks$: Observable<any>;
   allTasksFire: any[] = [];
+  generatedColorCode: any;
+  possibleHexcolorCharacters: any[] = ['A', 'B', 'C', 'D', 'E', 'F', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   // urgencies = ['Low', 'Medium', 'High'];
   urgencies = [
     {
@@ -91,7 +94,7 @@ export class AddTaskComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   save() {
     let object = {
@@ -106,7 +109,7 @@ export class AddTaskComponent implements OnInit {
     console.log(object);
 
     const coll = collection(this.firestore, 'tasks');
-    setDoc(doc(coll), {object});
+    setDoc(doc(coll), { object });
 
     this.allTasks.allTasksFire.push(object);
     this.addTaskForm.reset();
@@ -120,5 +123,21 @@ export class AddTaskComponent implements OnInit {
     // this.description = '';
     // this.dateInput = '';
     // this.urgencyInput = '';
+  }
+
+  //generate random Color for new Category
+  getColor() {
+
+    let min = Math.ceil(0);
+    let max = Math.floor(16)
+    var generatedCode: string = '#';
+    for (let i = 0; i < 6; i++) {
+      let generatedIndex = (Math.random() * (max - min) + min)
+      if (generatedIndex == 16) {
+        generatedIndex = 15;
+      }
+      generatedCode += this.possibleHexcolorCharacters[Math.floor(generatedIndex)]
+    }
+    document.getElementById('generatedColor').setAttribute('style', `background-color: ${generatedCode}`)
   }
 }

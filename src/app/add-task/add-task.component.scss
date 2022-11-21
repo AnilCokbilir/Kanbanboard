@@ -1,3 +1,5 @@
+$mainblue: #4589ff;
+
 h1 {
   text-align: center;
   margin-top: 64px;
@@ -74,6 +76,36 @@ mat-button-toggle-group {
   color: #42526e;
   font-size: 14px;
   font-weight: 700;
+}
+
+.color-gen-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  button{
+    background-color: $mainblue;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+    transition: 225ms;
+    background: #2172ff;
+    box-shadow: 0px 7px 15px -10px black;
+  }
+  }
+}
+
+.gen-color{
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 1px solid black;
 }
 
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline::before, ::ng-deep .mat-form-field-ripple {
