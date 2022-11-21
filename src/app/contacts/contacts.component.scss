@@ -196,6 +196,14 @@
                 background-position: right;
             }
 
+            .inputfields {
+                span {
+                    color: red;
+                    margin-left: 20px;
+                    font-size: 11px;
+                }
+            }
+
             .email {
                 background-image: url(/assets/img/email.png);
             }
@@ -216,6 +224,10 @@
             cursor: pointer;
         }
     }
+}
+
+.disabled {
+    cursor: not-allowed !important;
 }
 
 .animatinoReverse {
