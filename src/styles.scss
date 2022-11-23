@@ -59,3 +59,12 @@ app-board{
   width: 100%;
   margin: 64px 64px 0px 64px
 }
+
+#newCatInput .mat-form-field-infix {
+  display: flex;
+  padding-bottom: 0;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding-bottom: 16px;
+}

@@ -20,7 +20,24 @@ export class AddTaskComponent implements OnInit {
   tasks$: Observable<any>;
   allTasksFire: any[] = [];
   generatedColorCode: any;
-  possibleHexcolorCharacters: any[] = ['A', 'B', 'C', 'D', 'E', 'F', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  possibleHexcolorCharacters: any[] = [
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+  ];
   // urgencies = ['Low', 'Medium', 'High'];
   urgencies = [
     {
@@ -81,6 +98,8 @@ export class AddTaskComponent implements OnInit {
   urgency: any;
   urgencyInput: any;
   selected: string;
+  newCategoryOpened: boolean = false;
+  randomColor: string = '';
 
   @ViewChild('addTaskForm') addTaskForm: NgForm;
 
@@ -94,7 +113,25 @@ export class AddTaskComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
+
+  newCat() {
+    this.newCategoryOpened = true;
+  }
+
+  cancelCat() {
+    this.newCategoryOpened = false;
+  }
+
+  addNewCat(newCat: string) {
+    if (this.randomColor && newCat.length > 0)
+      this.categories.push({ text: newCat, color: this.randomColor });
+    else
+      alert('Please click Random Color Button and write minimum a letter ;)');
+    this.newCategoryOpened = false;
+    console.log(this.addTaskForm);
+    console.log(this.categories);
+  }
 
   save() {
     let object = {
@@ -127,17 +164,20 @@ export class AddTaskComponent implements OnInit {
 
   //generate random Color for new Category
   getColor() {
-
     let min = Math.ceil(0);
-    let max = Math.floor(16)
+    let max = Math.floor(16);
     var generatedCode: string = '#';
     for (let i = 0; i < 6; i++) {
-      let generatedIndex = (Math.random() * (max - min) + min)
+      let generatedIndex = Math.random() * (max - min) + min;
       if (generatedIndex == 16) {
         generatedIndex = 15;
       }
-      generatedCode += this.possibleHexcolorCharacters[Math.floor(generatedIndex)]
+      generatedCode +=
+        this.possibleHexcolorCharacters[Math.floor(generatedIndex)];
     }
-    document.getElementById('generatedColor').setAttribute('style', `background-color: ${generatedCode}`)
+    document
+      .getElementById('generatedColor')
+      .setAttribute('style', `background-color: ${generatedCode}`);
+    this.randomColor = generatedCode;
   }
 }
